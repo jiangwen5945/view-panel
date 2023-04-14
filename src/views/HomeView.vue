@@ -5,7 +5,10 @@
         <img v-show="theme === 'dark'" src="~@/assets/images/header_border_dark.png" alt="" />
         <img v-show="theme !== 'dark'" src="~@/assets/images/header_border_light.png" alt="" />
       </div>
-      <span class="logo">瞎猫商城</span>
+      <span class="logo">
+        <img src="../assets/images/logo.png"  alt="logo">
+        瞎猫商城
+      </span>
       <span class="title" :style="titleStyle">电商平台实时监控系统</span>
       <div class="title-right">
         <img v-show="theme === 'dark'" src="~@/assets/images/qiehuan_dark.png" class="qiehuan" @click="handleChangeTheme" alt="切换主题" title="切换主题" />
@@ -258,6 +261,12 @@ onUnmounted(() => {
     left: 0px;
     top: 50%;
     transform: translateY(-80%);
+    display: flex;
+    align-items: center;
+    img{
+      width: 1.8rem;
+      height: 1.8rem;
+    }
     a {
       text-decoration: none;
     }

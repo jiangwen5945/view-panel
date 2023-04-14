@@ -4,7 +4,8 @@ console.log('当前环境', process.env.NODE_ENV)
 // 网络请求错误的默认提示
 const NETWORK_ERROR = '网络请求异常，请稍后重试....'
 // 接口Api请求基准地址
-const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api/' : 'https://mock.apifox.cn/m1/2100083-0-default/'
+// const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api/' : 'https://mock.apifox.cn/m1/2100083-0-default/'
+const baseURL = process.env.NODE_ENV === 'development' ? 'https://mock.apifox.cn/m1/2100083-0-default/' : 'https://mock.apifox.cn/m1/2100083-0-default/'
 
 const request = axios.create({
   baseURL,
